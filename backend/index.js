@@ -12,7 +12,7 @@ app.use (({origin: ["http://localhost:3000"],})
 );
 
 //importing routes middlewere
-app.use("/user", userRoutes);
+app.use("/users", usersRoutes);
 
 //route or end point
 app.get("/", (req, res) => {

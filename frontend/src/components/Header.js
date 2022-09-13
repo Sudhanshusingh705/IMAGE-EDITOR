@@ -42,21 +42,29 @@ const Header = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/home">
-                    HOME
+                    <a href="#" class="text-primary">
+                      HOME
+                    </a>
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/login">
-                    LOGIN
+                    <a href="#" class="text-danger">
+                      LOGIN
+                    </a>
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/register">
-                    REGISTER
+                    <a href="#" class="text-success">
+                      REGISTER
+                    </a>
                   </NavLink>
                 </li>
                 <NavLink className="nav-link" to="/imageeditor">
-                  IMAGE EDITOR
+                  <a href="#" class="text-info">
+                    IMAGE-EDITOR
+                  </a>
                 </NavLink>
               </ul>
               {/* Left links */}
