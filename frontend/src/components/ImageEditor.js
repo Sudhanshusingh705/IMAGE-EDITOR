@@ -1,5 +1,5 @@
 import React from "react";
-//import "./ImageEditor.css";
+import "./ImageEditor.css";
 
 
 const ImageEditor = () => {
