@@ -4,12 +4,7 @@ import "./ImageEditor.css";
 
 const ImageEditor = () => {
   return (
-    <div>
-      <>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PHOTO EDITOR</title>
-        <link rel="stylesheet" href="style.css" />
+    <div className="editorbody container-fluid">
         <link
           href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
           rel="stylesheet"
@@ -138,7 +133,6 @@ const ImageEditor = () => {
             </button>
           </div>
         </div>
-      </>
     </div>
   );
 };
