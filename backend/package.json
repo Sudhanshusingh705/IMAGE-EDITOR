@@ -12,8 +12,10 @@
   "author": "SUDHANSHU SINGH",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "mongoose": "^6.6.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "socket.io": "^4.5.2"
   }
 }

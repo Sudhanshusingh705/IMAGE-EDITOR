@@ -1,30 +1,58 @@
-//importing express module
+// import express
 const express = require("express");
-const userRouter = require("./Routes/userRouter");
-const cors = require('cors');
+const userRouter = require("./routers/userRouter");
+const ImageRouter = require("./routers/ImageRouter");
 
-//initializing express app
+// intializing express
+const { createServer } = require("http");
+const { Server } = require("socket.io");
+
+const cors = require("cors");
+
+//  assign express in app and port 5000
 const app = express();
 const port = 5000;
 
-//for converting  json data to javascript
+const httpServer = createServer(app);
+const io = new Server(httpServer, {
+  cors: {
+    origin: ["http://localhost:3000"],
+  },
+});
+
+//  converting json to js
 app.use(express.json());
-app.use (cors({origin: ["http://localhost:3000"],})
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+  })
 );
 
-//importing routes middlewere
-app.use("/users", userRouter);
+//  middle ware
+app.use("/user", userRouter);
+app.use("/room", ImageRouter);
 
-//route or end point
+io.on("connection", (socket) => {
+  console.log("socket connected");
+
+  socket.on("sendmsg", (data) => {
+    console.log(data);
+
+    data.sent = false;
+    socket.to(data.Image).emit("recmsg", data);
+  });
+
+  socket.on("joinroom", (Image) => {
+    console.log(Image);
+    socket.join(Image);
+  });
+});
+
+// endpoint
 app.get("/", (req, res) => {
   res.send("response from express");
 });
 
-app.get("/home", (req, res) => {
-  res.send("response from home ");
-});
-
-//starting  the server
-app.listen(port, () => {
-  console.log("Hacking Express server started...");
+httpServer.listen(port, () => {
+  console.log("server started");
 });

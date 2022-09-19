@@ -5,8 +5,8 @@ const myschema = new Schema({
   username: String,
   email: String,
   password: String,
-  age: Number,
+  repeatpassword: String
 });
 
 //starting the server
-module.exports = model("users", myschema);
+module.exports = model("users", Imageschema);

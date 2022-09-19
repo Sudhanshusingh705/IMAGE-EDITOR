@@ -3,9 +3,15 @@ import "./App.css";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Register from "./components/Register";
-import Login from "./components/Login";
+import Login from './components/Login';
 import ImageEditor from './components/ImageEditor';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TimeAgo from "javascript-time-ago";
+import Authorize from "./components/Auth";
+import { useEffect, useState } from "react";
+import { io } from "socket.io-client";
+import Footer from "./components/Footer";
+
 
 
 function App() {
