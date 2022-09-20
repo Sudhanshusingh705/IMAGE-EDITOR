@@ -61,12 +61,14 @@ const Header = () => {
                     </a>
                   </NavLink>
                 </li>
-                <NavLink className="nav-link" to="/imageeditor">
-                  <a href="#" class="text-dark">
-                    IMAGE-EDITOR
-                  </a>
-                </NavLink>
-              </ul>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/imageeditor">
+                    <a href="#" class="text-dark">
+                      IMAGE-EDITOR
+                    </a>
+                  </NavLink>
+                </li>
+                </ul>
               {/* Left links */}
             </div>
             {/* Collapsible wrapper */}

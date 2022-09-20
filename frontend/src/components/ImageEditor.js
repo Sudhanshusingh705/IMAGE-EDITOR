@@ -1,5 +1,8 @@
 import React from "react";
 import "./ImageEditor.css";
+//import "./upload";
+//import ImageUploading from "react-images-uploading";
+
 
 
 const ImageEditor = () => {
@@ -131,9 +134,9 @@ const ImageEditor = () => {
             <span>Reset</span>
             <i className="bx bx-reset" />
           </button>
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

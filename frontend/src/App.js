@@ -6,17 +6,21 @@ import Register from "./components/Register";
 import Login from './components/Login';
 import ImageEditor from './components/ImageEditor';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TimeAgo from "javascript-time-ago";
-import Authorize from "./components/Auth";
-import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
-import Footer from "./components/Footer";
+import React, { useState } from "react"; 
+//import TimeAgo from "javascript-time-ago";
+//import Authorize from "./components/Auth";
+//im//port { useEffect, useState } from "react";
+//import { io } from "socket.io-client";
+//import Footer from "./components/Footer";
+//import en from "javascript-time-ago/locale/en";
 
 
 
 function App() {
+
   return (
     <div>
+
       <BrowserRouter>
         <Header />
         <Routes>
@@ -25,6 +29,7 @@ function App() {
           <Route element={<Login></Login>} path="login" />
           <Route element={<Register></Register>} path="register" />
           <Route element={<ImageEditor></ImageEditor>} path="imageEditor" />
+         
           
           
           
