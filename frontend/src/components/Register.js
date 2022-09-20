@@ -51,7 +51,7 @@ const Register = () => {
         >
           <div className="card-body py-5 px-md-5">
             <div className="row d-flex justify-content-center">
-              <div className="col-lg-8">
+              <div className="col-lg-4">
                 <h2 className="fw-bold mb-5">Sign up now</h2>
                 <Formik
                   initialValues={{ username: "", email: "", password: "" }}
@@ -59,7 +59,7 @@ const Register = () => {
                 >
                   {({ values, handleSubmit, handleChange }) => (
                     <form onSubmit={handleSubmit}>
-                      <div className="form-outline mb-4">
+                      <div className="mb-4">
                         <input
                           type="text"
                           id="username"
@@ -71,7 +71,7 @@ const Register = () => {
                       </div>
 
                       {/* Email input */}
-                      <div className="form-outline mb-4">
+                      <div className="mb-4">
                         <input
                           type="email"
                           id="email"
@@ -84,7 +84,7 @@ const Register = () => {
                         </label>
                       </div>
                       {/* Password input */}
-                      <div className="form-outline mb-4">
+                      <div className="mb-4">
                         <input
                           type="password"
                           id="password"

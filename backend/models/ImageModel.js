@@ -1,10 +1,10 @@
 const { Schema, model } = require("../connection");
 
-const chatschema = new Schema({
-  username:String,
+const imageSchema = new Schema({
+    username:String,
     email:String,
     password:String,
     createdAt: Date
 });
 
-module.exports = model("rooms", Imageschema);
+module.exports = model("image", imageSchema);

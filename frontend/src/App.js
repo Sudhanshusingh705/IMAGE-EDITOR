@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import "./App.css";
 import Home from "./components/Home";
 import Header from "./components/Header";
@@ -6,17 +5,13 @@ import Register from "./components/Register";
 import Login from './components/Login';
 import ImageEditor from './components/ImageEditor';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from "react"; 
-//import TimeAgo from "javascript-time-ago";
-//import Authorize from "./components/Auth";
-//im//port { useEffect, useState } from "react";
-//import { io } from "socket.io-client";
-//import Footer from "./components/Footer";
-//import en from "javascript-time-ago/locale/en";
+import React from "react"; 
+import Notfound from "./components/Notfound";
 
 
 
-function App() {
+
+function App({currentUser, checkUserSession }) {
 
   return (
     <div>
@@ -24,14 +19,15 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+      
           <Route element={<Home></Home>} path="/" />
           <Route element={<Home></Home>} path="home" />
           <Route element={<Login></Login>} path="login" />
           <Route element={<Register></Register>} path="register" />
           <Route element={<ImageEditor></ImageEditor>} path="imageEditor" />
+           <Route exact path="/" component={Home} />
+          <Route component={<Notfound></Notfound>} path="Notfound" />
          
-          
-          
           
         </Routes>
       </BrowserRouter>

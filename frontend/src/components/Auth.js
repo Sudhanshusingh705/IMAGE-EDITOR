@@ -6,12 +6,13 @@ const Authorize = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
+  console.log(currentUser);
 
   if (currentUser === null) {
     Swal.fire({
       icon: "error",
       title: "Ooops!!",
-      text: "Login For ImageEditor",
+      text: "You Need To Login ",
     });
     return <Navigate to="/login" />;
   }

@@ -33,4 +33,16 @@ router.post("/authenticate", (req, res) => {
     });
 });
 
+router.get("/getall", (req, res) => {
+  Model.find({})
+    .then((result) => {
+      console.log(result);
+      res.json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
+
 module.exports = router;
