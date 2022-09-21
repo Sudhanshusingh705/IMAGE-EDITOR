@@ -17,6 +17,18 @@ router.post("/add", (req, res) => {
     });
 });
 
+router.get("/getbyuser/:userid", (req, res) => {
+  Model.find({createdBy : req.params.userid})
+    .then((result) => {
+      console.log(result);
+      res.json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
+
 router.get("/getall", (req, res) => {
   Model.find()
     .then((result) => {

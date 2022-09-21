@@ -1,10 +1,10 @@
-const { Schema, model } = require("../connection");
+const { Schema, model, Types } = require("../connection");
 
 const myschema = new Schema({
   name: String,
   image: String,
-  createdBy: String,
+  createdBy: { type: Types.ObjectId, ref: "" },
   createdAt: Date,
 });
 
-module.exports = model("filter", myschema);
+module.exports = model("filters", myschema);

@@ -144,7 +144,7 @@ const ImageEditor = () => {
       <div className="editor-cont" style={{ background: "#1a3847" }}>
         <p
           className="page-title text-center"
-          style={{ color: "white", fontSize: "50px" }}
+          style={{ color: "cyan", fontSize: "50px" }}
         >
           Image Editor
         </p>
@@ -178,7 +178,9 @@ const ImageEditor = () => {
                       console.log(e.type);
                     }}
                   >
-                    <b>Select File</b>
+                    <button>
+                      <b>Select File </b>
+                    </button>
                   </label>
                   <input
                     className=""

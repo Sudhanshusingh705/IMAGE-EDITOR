@@ -3,3 +3,13 @@
     z-index: 1;
     height: 100vh;
 }
+
+.editor-image{
+    height: 80vh;
+    background-size: contain;
+    background-position: cover;
+    overflow: scroll;
+
+}
+
+
