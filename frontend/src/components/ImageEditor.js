@@ -152,7 +152,7 @@ const ImageEditor = () => {
           <div className="row">
             <div className="col-md-2">
               <div className="card saved-filters">
-                <div className="card-body" style={{ background: "#EEDD82" }}>
+                <div className="card-body" style={{ background: "EEDD82" }}>
                   <h5 className="text-center fw-bold">Available Filters</h5>
                   <hr />
                   <Filters
