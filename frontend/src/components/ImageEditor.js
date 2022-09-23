@@ -178,9 +178,7 @@ const ImageEditor = () => {
                       console.log(e.type);
                     }}
                   >
-                    <button>
                       <b>Select File </b>
-                    </button>
                   </label>
                   <input
                     className=""
